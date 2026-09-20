@@ -1,0 +1,23 @@
+{
+  "names": {
+    "Fixture Co": "Acme Ltd",
+    "Scanner": "Acme Scan",
+    "Monitor": "Acme Watch"
+  },
+  "logos": {
+    "hero.png": "logo.png"
+  },
+  "colors": {
+    "pack-2563eb": "#e11d48",
+    "pack-111827": "#0f172a"
+  },
+  "fonts": {
+    "Fixture": {
+      "family": "Acme Sans",
+      "faces": [
+        { "file": "fonts/Acme-Regular.woff2", "weight": "400", "style": "normal" },
+        { "file": "fonts/Acme-Bold.woff2", "weight": "700", "style": "normal" }
+      ]
+    }
+  }
+}

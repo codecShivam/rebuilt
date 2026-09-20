@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": ["node"]
+  },
+  "include": ["src", "test", "vitest.config.ts"],
+  // fixtures are data, not this repo's source: the vendored bulletproof-react snapshot under
+  // test/fixtures/scaffold holds .ts files that belong to the generated project's tsconfig
+  "exclude": ["test/fixtures"]
+}

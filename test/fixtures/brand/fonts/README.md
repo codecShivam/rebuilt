@@ -1,0 +1,1 @@
+Acme-Regular.woff2 and Acme-Bold.woff2 are the same bytes as ../../site/fonts/Fixture-Regular.woff2 (`files/inter-latin-400-normal.woff2` from `@fontsource/inter` v5.3.0, SIL Open Font License), under the brand's own names: the brand phase copies faces by basename and declares them under the brand family, and nothing in the tests reads the glyphs.

@@ -1,0 +1,48 @@
+@font-face { font-family: 'Fixture'; src: url('/fonts/Fixture-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; }
+@font-face { font-family: 'Fixture'; src: url('/fonts/a1b2c3d4e5.woff2') format('woff2'); font-weight: 700; font-style: normal; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Fixture', Arial, sans-serif; color: #1f2937; background: #ffffff; }
+.site-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; background: #111827; color: #ffffff; }
+.logo { color: #ffffff; text-decoration: none; font-size: 20px; font-weight: 700; }
+.nav { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; }
+.nav-item { position: relative; }
+.nav-link { background: none; border: 0; color: #ffffff; font: inherit; font-size: 16px; cursor: pointer; padding: 8px 0; }
+.menu { display: none; position: absolute; top: 100%; left: 0; background: #ffffff; color: #111827; list-style: none; margin: 0; padding: 8px 0; min-width: 160px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); border-radius: 8px; }
+.menu a { display: block; padding: 8px 16px; color: #111827; text-decoration: none; }
+.has-menu:hover .menu, .has-menu.open .menu { display: block; }
+.hero { padding: 64px 32px; text-align: center; background: #f3f4f6; }
+.badge { display: inline-block; padding: 4px 12px; border-radius: 999px; background: #2563eb; color: #ffffff; font-size: 12px; animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.08); } 100% { transform: scale(1); } }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+.hero h1 { font-size: 48px; margin: 16px 0 8px; animation: fadeIn 300ms ease-out forwards; }
+.lede { font-size: 18px; color: #4b5563; margin: 0 0 16px; }
+.counter { font-size: 14px; color: #6b7280; }
+#counter { display: inline-block; width: 3ch; text-align: left; }
+.button { display: inline-block; padding: 12px 24px; border-radius: 8px; border: 0; font-size: 16px; text-decoration: none; cursor: pointer; transition: background-color 200ms ease-in-out; }
+.button.primary { background: #2563eb; color: #ffffff; }
+.button.primary:hover { background: #1d4ed8; }
+.hero img { display: block; margin: 32px auto 0; max-width: 100%; height: auto; border-radius: 12px; }
+.features { padding: 64px 32px; }
+.features h2, .faq h2, .cta h2 { font-size: 32px; text-align: center; margin: 0 0 32px; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; list-style: none; margin: 0; padding: 0; }
+.card { padding: 24px; border: 1px solid #e5e7eb; border-radius: 12px; }
+.card h3 { margin: 0 0 8px; font-size: 20px; }
+.card p { margin: 0; color: #4b5563; }
+.faq { padding: 64px 32px; background: #f9fafb; }
+.faq details { border-bottom: 1px solid #e5e7eb; padding: 16px 0; }
+.faq summary { cursor: pointer; font-weight: 700; }
+.cta { padding: 64px 32px; text-align: center; }
+.site-footer { padding: 32px; background: #111827; color: #9ca3af; font-size: 14px; }
+.footer-links { display: flex; gap: 16px; list-style: none; padding: 0; margin: 8px 0 0; }
+.footer-links a { color: #9ca3af; }
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; }
+.modal[hidden] { display: none; }
+.modal-box { background: #ffffff; padding: 32px; border-radius: 12px; width: 360px; }
+.close { margin-top: 16px; background: none; border: 0; color: #6b7280; cursor: pointer; }
+@media (max-width: 600px) { .cards { grid-template-columns: 1fr; } .hero h1 { font-size: 32px; } .site-header { padding: 12px 16px; } }
+.hamburger { display: none; width: 40px; height: 32px; padding: 6px 8px; border: 0; background: none; cursor: pointer; flex-direction: column; justify-content: space-between; }
+.hamburger span { display: block; height: 3px; background: #ffffff; border-radius: 2px; }
+.drawer { position: fixed; top: 56px; left: 0; right: 0; background: #111827; padding: 8px 16px 16px; z-index: 10; }
+.drawer[hidden] { display: none; }
+.drawer a { display: block; padding: 12px 0; color: #ffffff; text-decoration: none; border-bottom: 1px solid #374151; }
+@media (max-width: 600px) { .hamburger { display: flex; } }

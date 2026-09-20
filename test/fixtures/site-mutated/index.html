@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fixture Co</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/">Fixture Co</a>
+    <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li class="nav-item has-menu">
+          <button class="nav-link" aria-haspopup="true" aria-expanded="false">Products</button>
+          <ul class="menu">
+            <li><a href="/about.html">Scanner</a></li>
+            <li><a href="/about.html">Monitor</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+      </ul>
+    </nav>
+    <div class="drawer" id="drawer" hidden><a href="/about.html">About</a><a href="/about.html">Privacy</a></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="badge">New</span>
+      <h1>Know before you go</h1>
+      <p class="lede">Fixture Co checks every detail so you never have to guess.</p>
+      <p class="counter">Checks today: <strong id="counter">0</strong></p>
+      <a class="button primary" href="/about.html">Start free</a>
+      <img src="/hero.png" alt="Product screenshot" width="480" height="270" />
+    </section>
+
+    <section class="features">
+      <h2>Everything you need</h2>
+      <ul class="cards">
+        <li class="card"><h3>Fast scans</h3><p>Results in under a minute, every time.</p></li>
+        <li class="card"><h3>Deep records</h3><p>Public data from over two hundred sources.</p></li>
+      </ul>
+    </section>
+
+    <section class="faq">
+      <h2>Questions</h2>
+      <details><summary>Is it accurate?</summary><p>Accuracy depends on the sources, and we show you which ones matched.</p></details>
+      <details><summary>Can I cancel?</summary><p>Any time, from your account page, with one click.</p></details>
+      <details><summary>Do you store data?</summary><p>No. Reports are generated on demand and discarded.</p></details>
+    </section>
+
+    <section class="cta">
+      <h2>Ready when you are</h2>
+      <button class="button primary" id="open-modal">Talk to us</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Fixture Co, 1 Example Street</p>
+    <ul class="footer-links"><li><a href="/about.html">About</a></li><li><a href="/about.html">Privacy</a></li></ul>
+  </footer>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <h2 id="modal-title">Talk to us</h2>
+      <form><label>Email <input type="email" name="email" required /></label><button class="button primary" type="submit">Send</button><p class="fineprint">This form is protected by reCAPTCHA.</p></form>
+      <button class="close" id="close-modal">Close</button>
+    </div>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

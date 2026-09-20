@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fixture App</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .mobile-note { display: none; font-size: 14px; color: #6b7280; margin: 0 0 16px; }
+    .wide-only { padding: 64px 32px; text-align: center; background: #eef2ff; }
+    .wide-only h2 { font-size: 32px; margin: 0 0 16px; }
+    .contact { padding: 64px 32px; }
+    .contact h2 { font-size: 32px; text-align: center; margin: 0 0 32px; }
+    .contact form { display: grid; gap: 12px; max-width: 360px; margin: 0 auto; }
+    .contact input { padding: 8px; border: 1px solid #e5e7eb; border-radius: 8px; font: inherit; }
+    .fineprint { font-size: 12px; color: #6b7280; margin: 0; }
+    @media (max-width: 600px) { .mobile-note { display: block; } .wide-only { display: none; } }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div class="app">
+      <header class="site-header"><a class="logo" href="/">Fixture Co</a></header>
+      <section class="hero">
+        <h1>Built like an app</h1>
+        <p class="lede">One root element, one wrapper, no main landmark.</p>
+        <p class="mobile-note">Swipe for more</p>
+      </section>
+      <section class="features">
+        <h2>Everything you need</h2>
+        <ul class="cards">
+          <li class="card"><h3>Fast scans</h3><p>Results in under a minute, every time.</p></li>
+          <li class="card"><h3>Deep records</h3><p>Public data from over two hundred sources.</p></li>
+        </ul>
+      </section>
+      <section class="wide-only">
+        <h2>Only on wide screens</h2>
+        <p>This section is hidden below 600px, so its mobile crop has no box.</p>
+      </section>
+      <section class="contact">
+        <h2>Contact us</h2>
+        <form>
+          <label>Name <input type="text" name="name" /></label>
+          <button class="button primary" type="submit">Send</button>
+          <p class="fineprint">This form is protected by reCAPTCHA.</p>
+        </form>
+      </section>
+      <footer class="site-footer"><p>Fixture Co, 1 Example Street</p></footer>
+    </div>
+  </div>
+</body>
+</html>

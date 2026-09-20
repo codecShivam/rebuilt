@@ -1,0 +1,6 @@
+#!/bin/sh
+# an ffmpeg that writes as many small pngs as -frames:v asks for, at the output pattern.
+# the loader is named by absolute path because --import resolves a bare specifier against the
+# cwd, and the cwd of the process that runs this is not always this repo.
+dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+exec node --import "$dir/../../../node_modules/tsx/dist/loader.mjs" "$dir/fake-ffmpeg.ts" "$@"

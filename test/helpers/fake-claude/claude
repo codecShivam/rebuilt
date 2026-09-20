@@ -1,0 +1,6 @@
+#!/bin/sh
+# the fake claude the tests put on PATH or pass as --claude: node runs the typescript next to it.
+# the loader is named by absolute path because --import resolves a bare specifier against the
+# cwd, and the cwd of a worker call is the rebuilt project, not this repo.
+dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+exec node --import "$dir/../../../node_modules/tsx/dist/loader.mjs" "$dir/fake-claude.ts" "$@"

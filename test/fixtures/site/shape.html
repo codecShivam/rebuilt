@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fixture Shape</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .tagline { margin: 0; font-size: 14px; color: #9ca3af; }
+    .filler { height: 1800px; background: #f9fafb; }
+    .below { padding: 64px 32px; display: grid; gap: 24px; justify-items: start; }
+    .below button { font: inherit; padding: 8px 16px; border: 1px solid #e5e7eb; border-radius: 8px; background: #ffffff; cursor: pointer; }
+    .newtab { color: #2563eb; }
+    .site-footer nav { margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/">Fixture Co</a>
+    <p class="tagline">Everything interesting is below the fold</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Shapes</h1>
+      <p class="lede">A page whose triggers all sit past the first screen.</p>
+    </section>
+
+    <section class="filler"></section>
+
+    <section class="below">
+      <h2>Controls</h2>
+      <button aria-expanded="false">Noop toggle</button>
+      <details><summary>Below the fold</summary><p>opened</p></details>
+      <button id="late-nav">Leaves later</button>
+      <a class="newtab" href="/index.html" target="_blank" role="button">Opens a tab</a>
+      <p><a href="/index.html">Back to the index</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Fixture Co, 1 Example Street</p>
+    <nav aria-label="Footer">
+      <ul class="footer-links"><li><a href="/index.html">Privacy</a></li><li><a href="/index.html">Terms</a></li></ul>
+    </nav>
+  </footer>
+  <script>
+    document.getElementById('late-nav').addEventListener('click', function () {
+      setTimeout(function () { location.href = '/index.html'; }, 200);
+    });
+  </script>
+</body>
+</html>

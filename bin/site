@@ -1,0 +1,6 @@
+#!/bin/sh
+# the tsx loader is named by absolute path, not as the bare specifier `tsx`: --import resolves a
+# bare specifier against the cwd, and a worker's hook runs this with the rebuilt project as its
+# cwd, where there is no tsx to find. the path is the package's own root export.
+dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+exec node --import "$dir/../node_modules/tsx/dist/loader.mjs" "$dir/../src/cli/index.ts" "$@"
